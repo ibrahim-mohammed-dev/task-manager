@@ -1,0 +1,13 @@
+@if (task) {
+  <div class="show-user-details">
+    <p>Title: {{ task.title }}</p>
+    <p>Description: {{ task.description }}</p>
+    <p>Category: {{ task.category }}</p>
+    <p>Status: {{ task.completed ? 'Completed' : 'Not Completed' }}</p>
+    <button type="button" routerLink="/tasks">Go to tasks List</button>
+  </div>   
+} @else {
+  <h2>Task is not found with id: {{ taskId }}</h2>
+  <button type="button" routerLink="/tasks">Back to tasks List</button>
+}
+
